@@ -1,0 +1,15 @@
+
+<%- include('header',{title: 'Thong tin ca nhan'}); -%>
+<ul>
+    <li><strong>ID</strong>: <%= currentUser.id %></li>
+    <li><strong>username</strong>: <%= currentUser.username %></li>
+    <li><strong>Ten hien thi</strong>: <%= currentUser.displayName %></li>
+</ul>
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="avatar">Hinh dai dien</label>
+      <input type="file" class="form-control-file" id="avater" name="avatar">
+    </div>
+    <button type="submit" class="btn btn-primary">Dang hinh dai dien</button>
+  </form>
+<%- include('footer'); -%>

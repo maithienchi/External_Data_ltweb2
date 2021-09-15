@@ -1,0 +1,18 @@
+<%- include('header',{title: 'ToDo List App'}); -%>
+<form method="POST">
+    <input class="form-control my-sm-2" type="text" name="newtask" placeholder="What needs to be done" aria-label="Search">
+    <button class="btn btn-outline-success my-5 my-sm-1"type="submit">Add</button>
+    <h2> Đã Thêm </h2>
+    <% for( var i = 0; i < task.length; i++){ %>
+      <li><input type="checkbox" name="check" value="<%= task[i].id %>" /> <%= task[i].name %> </li>
+      <% } %>
+    <button type="submit" class="btn btn-outline-warning"> Hoàn thành </button>
+
+    <h2> Completed task </h2>
+    <% for(var i = 0; i < complete.length; i++){ %>
+      <li><input type="checkbox" checked><%= complete[i].name %> </li>
+<% } %>
+</form>
+
+
+  <%- include('footer'); -%>

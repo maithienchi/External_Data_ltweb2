@@ -1,0 +1,9 @@
+
+
+<%- include('header',{title: 'Trang chu'}); -%>
+  <h1>Số lượng xem <%= views %></h1>
+  <p>Xin chao <%= currentUser ? (currentUser.token ? 'bạn cần kích hoạt tìa khoản!' : currentUser.displayName) : 'Khach' %></p>
+<%- include('footer'); -%>
+
+
+

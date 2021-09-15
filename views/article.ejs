@@ -1,0 +1,56 @@
+<%- include('header',{title: 'Article'}); -%>
+<h2>Bảng tin</h2> 
+<form action="/article/covid19" method="get">
+  <div class="form-group" style="text-align:center;">
+  <button type="submit" class="btn btn-outline-success col-md-6 mb-3"id="COVID19" name="COVID19" value="COVID19">LỌC COVID19</button>
+</form>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card-header" style="text-align:center;">
+        VNEXPRESS
+      </div>
+      <div class="target" style="height:400px;overflow:scroll;">
+        <% vnexpress.forEach(function (t) { %>
+          <li><b><%= t.title %></b>
+            <p1><%= t.content %></p1>
+            <p1><%= t.publishedAt %></p1>
+            <p2><a href="<%= t.link %>">xem thêm</a></p2>
+          </li>                
+         <% }); %>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card-header" style="text-align:center;">
+        Tuổi Trẻ
+      </div>
+      <div class="target" style="height:400px;overflow:scroll;">
+        <% tuoitre.forEach(function (t) { %>
+          <li><b><%= t.title %></b>
+            <p1><%= t.content %></p1>
+            <p1><%= t.publishedAt %></p1>
+            <p2><a href="<%= t.link %>">xem thêm</a></p2>
+          </li>                
+         <% }); %>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card-header" style="text-align:center;">
+        Thanh Niên
+      </div>
+      <div class="target" style="height:400px;overflow:scroll;">
+        <% thanhnien.forEach(function (t) { %>
+          <li><b><%= t.title %></b>
+            <p1><%= t.content %></p1>
+            <p1><%= t.publishedAt %></p1>
+            <p2><a href="<%= t.link %>">xem thêm</a></p2>
+          </li>                
+         <% }); %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('footer'); -%>
